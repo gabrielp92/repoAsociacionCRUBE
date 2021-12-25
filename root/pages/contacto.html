@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASOCIACION ULTIMA TRIPULACION CRUBE</title>
+    <!--link icono-->
+    <link rel="shortcut icon" href="../assets/img/icono.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css"/>
+  </head>
+  <body>
+    <header class="header"> 
+      <!--logo-->
+      <img class= "header__logo" src="../assets/img/logo.png" alt="Logo Crucero ARA Gral. Belgrano">
+      <nav class= "header__nav">
+        <!--lista con secciones de página-->
+        <ul class= "header__list">
+          <li class= "header__item"><a class= "header__link" href="../index.html">INICIO</a></li>
+          <li class= "header__item"><a class= "header__link" href="institucional.html">INSTITUCIONAL</a><li>
+          <li class= "header__item"><a class= "header__link" href="actividades.html">ACTIVIDADES</a></li>
+          <li class= "header__item"><a class= "header__link" href="museo.html">MUSEO</a></li>
+          <li class= "header__item"><a class= "header__link" href="#">CONTACTO</a></li>
+        </ul>
+      </nav>
+      <!--lista con redes sociales-->
+      <ul class= "header__listRedes">
+        <li class= "header__itemRedes">
+          <a class="header__link" href="https://www.facebook.com/ultimatripulacioncrubepuntaalta" title="Acceder a Facebook de la Asociación" target="_blank">
+            <img src="../assets/img/logoFacebook.png"" alt="FACEBOOK"> 
+          </a>
+        </li>
+        <li class="header__itemRedes">
+          <a class="header__link" href="https://api.whatsapp.com/send?phone=5492932441606" title="Acceder a Whatsapp de la Asociación" target="_blank">
+            <img src="../assets/img/logoWhatsapp.png" alt="WHATSAPP">
+          </a>
+        </li>
+      </ul>      
+    </header>
+    <main class="mainPages">
+      <!--formulario de contacto-->
+      <form class="contacto__form" id="formulario contacto" action="#" method="get">
+        <fieldset class="contacto__form__fieldset">
+          <legend class="contacto__form__legend">INFORMACIÓN DE CONTACTO</legend>
+          <label class="contacto__form__label" for="nombre">Nombre</label>
+          <input class="contacto__form__input" type="text" name="nombre" maxlength="40" placeholder="Introduzca su nombre"/>
+          <label class="contacto__form__label" for="apellido">Apellido</label>
+          <input class="contacto__form__input" type="text" name="apellido" maxlength="40" placeholder="Introduzca su apellido"/>
+          <label class="contacto__form__label" for="numeroCelular">Número de celular</label>
+          <input class="contacto__form__input" type="number" name="numeroCelular" placeholder="(cód. país)(cód. área)(núm. celular)"/>
+          <label class="contacto__form__label" for="email">Correo electrónico</label>
+          <input class="contacto__form__input" type="email" name="email" maxlength="100" placeholder="Ejemplo: mail@gmail.com"/>
+          <textarea class="contacto__form__textarea"
+            name="area_texto"
+            rows="3"
+            cols="30"
+            maxlength="600"
+            placeholder="Escriba aquí su consulta"
+          ></textarea>
+          <div>
+            QUIERO ASOCIARME
+            <input type="checkbox" name="acepta_asociarse" value="1" checked />
+          </div>
+        </fieldset>
+        <input class="contacto__form__enviar" type="submit" value="ENVIAR" />
+        <input class="contacto__form__reset" type="reset" value="RESTABLECER" />
+      </form>
+    </main>
+    <footer class="footer">
+      <div class="footer__contenedor">
+          <!--logo y texto de ubicación-->
+          <img class="footer__logo" src="../assets/img/logoFooter.png" alt="Logo Crucero ARA Gral. Belgrano">
+          <div class="footer__direccion">
+              <h3 class="footer__subtitulo">ENCONTRANOS</h3>
+              <p class="footer__ubicacion">Pasaje Vucetich 3276, Punta Alta,<br>Provincia de Buenos Aires.</>
+              <h4 class="footer__email">asociacionultimatripupuntaalta@gmail.com</h4>
+          </div>
+      </div>
+      <div class="footer__mapa">
+          <!--mapa-->
+          <iframe class="footer__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3107.268242307043!2d-62.089227685034665!3d-38.84921640176763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ed9d83b55c1527%3A0xc1642ea34db8167e!2sMuseo%20Asociaci%C3%B3n%20Ultima%20Tripulaci%C3%B3n%20del%20Crucero%20A.R.A.%20General%20Belgrano!5e0!3m2!1ses-419!2sar!4v1637881621413!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+      </div>
+    </footer>   
+  </body>
+</html>

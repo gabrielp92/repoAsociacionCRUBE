@@ -83,7 +83,9 @@ a{
     list-style: none; /*quita los bullets*/
     display: flex;
     justify-content: flex-end;
+    align-content: center;
     margin-right: 2rem;
+    margin-bottom: 0px;
 }
 
 .header__itemRedes{

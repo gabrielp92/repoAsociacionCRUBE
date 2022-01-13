@@ -137,7 +137,7 @@ a {
   margin-bottom: 65.5vh;
 }
 
-.hero .hero__boton {
+.hero__boton {
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.7);
   border-width: 2px;
@@ -151,12 +151,12 @@ a {
   transition: all 0.5s;
 }
 
-.hero .hero__boton:hover {
+.hero__boton:hover {
   background-color: rgba(156, 47, 47, 0.836);
   cursor: pointer;
 }
 
-.hero .hero__boton a {
+.hero__boton a {
   color: white;
 }
 
@@ -671,7 +671,7 @@ a {
 
 /********************************* MEDIA QUERIES **********************************/
 @media (max-width: 400px) {
-  .footer__subtitulo, .footer__ubicacion, .footer__email {
+  .footer__contenedor .footer__direccion {
     font-size: 1rem;
   }
 }
@@ -696,15 +696,18 @@ a {
     font-size: 1rem;
     font-weight: 500;
   }
-  .header__logo {
+  .container-fluid {
+    width: 100vw;
+  }
+  .container-fluid .header__logo {
     max-width: 50%;
     margin: 0px;
   }
-  .header__item {
-    margin: 0px 0.6rem;
+  .container-fluid .header__item {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    margin: 0px 0.6rem;
   }
   .header__itemRedes {
     display: none;
@@ -812,8 +815,6 @@ a {
     display: none;
   }
   .footer__contenedor .footer__direccion {
-    font-size: 1rem;
-    /***/
     max-width: 100%;
   }
   .footer__mapa {
@@ -863,23 +864,23 @@ a {
             justify-content: space-between;
     padding: 2rem 0.5rem;
   }
-  .footer__logo {
-    display: none;
-  }
   .footer__contenedor {
     width: 75vw;
     margin-left: auto;
     margin-right: auto;
+  }
+  .footer__contenedor .footer__logo {
+    display: none;
+  }
+  .footer__contenedor .footer__direccion {
+    max-width: 100%;
   }
   .footer__mapa {
     width: 75vw;
     margin-left: auto;
     margin-right: auto;
   }
-  .footer__direccion {
-    max-width: 100%;
-  }
-  .footer__iframe {
+  .footer__mapa .footer__iframe {
     width: 75vw;
     max-width: 100%;
   }

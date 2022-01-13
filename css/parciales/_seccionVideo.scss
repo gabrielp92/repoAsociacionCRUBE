@@ -1,0 +1,35 @@
+@import "variables";
+.video{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 4rem;
+    gap: 1.25rem;
+    &__youtube{
+        min-width: 60%;
+    }
+    &__descripcion{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: justify;
+        flex-wrap: wrap;
+        font-family: $font-main;
+        &__titulo{
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1.25rem;
+            color: $color-secondary;
+            font-size: 1.8rem;
+            font-weight: 300;
+            text-align: center;
+        }
+        &__parrafo{
+            color: $color-texto;
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+    }
+}

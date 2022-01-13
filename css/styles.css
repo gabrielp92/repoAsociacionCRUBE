@@ -46,14 +46,14 @@ a{
     z-index: 4;
 }
 
-.header__logo{
-    max-width: 100%;
-    margin-left: 2rem;
-}
-
 .header__nav{
     display:flex;
     justify-content: center;
+}
+
+.header__logo{
+    max-width: 100%;
+    margin-left: 2rem;
 }
 
 .navbar-light .navbar-nav .nav-link {

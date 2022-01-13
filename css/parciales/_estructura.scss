@@ -1,0 +1,27 @@
+@import "variables";
+body{ 
+    /*fondo con gradiente*/
+    background: rgb(10,107,126);
+    background: -moz-linear-gradient(90deg, rgba(10,107,126,1) 0%, rgba(32,60,113,1) 38%, rgba(20,38,71,1) 67%, rgba(11,21,40,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(10,107,126,1) 0%, rgba(32,60,113,1) 38%, rgba(20,38,71,1) 67%, rgba(11,21,40,1) 100%);
+    background: linear-gradient(90deg, rgba(10,107,126,1) 0%, rgba(32,60,113,1) 38%, rgba(20,38,71,1) 67%, rgba(11,21,40,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a6b7e",endColorstr="#0b1528",GradientType=1);
+    overflow-x: hidden;
+}
+
+nav{
+    font-size: 1.7rem;
+    font-family: $font-main;
+    font-weight: 300;
+}
+
+a{ 
+    color: $color-main;
+    text-decoration: none;
+}
+
+.grid-body{
+    display: grid;
+    /*pancake stack*/
+    grid-template-rows: auto auto 1fr auto;
+}

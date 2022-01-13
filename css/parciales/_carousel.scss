@@ -1,0 +1,91 @@
+@import "variables";
+.subtitulo__actividades{
+    color: $color-texto;
+    font-size: 2rem;
+    font-family: $font-main;
+    font-weight: 300;
+    padding-left: 35px;
+    margin-bottom: 3rem;
+}
+
+.carousel {
+    margin-bottom: 4rem;
+    .actividades{
+        font-size: 1.25rem;
+        font-family: $font-main;
+        font-weight: 500;
+        .carousel-item {
+            height: 50rem;
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                min-width: 100%;
+                height: 50rem;
+            }
+            .actividades__articulo__img{
+                align-self: center;
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+            }
+            .carousel-caption{
+                bottom: 3rem;
+                z-index: 3;
+                color: $color-texto-carousel;
+                .actividades__articulo__fecha{
+                    font-weight: 700;
+                    padding-left: 1.95rem;
+                    padding-right: 1.95rem;
+                    padding-bottom: 0.5rem;
+                }
+                .actividades__articulo__titulo{
+                    font-weight: 700;
+                    padding-left: 1.95rem;
+                    padding-right: 1.95rem;
+                    padding-bottom: 0.5rem;
+                }
+                .actividades__articulo__parrafo{
+                    font-weight: 700;
+                    padding-left: 1.95rem;
+                    padding-bottom: 0.975rem;
+                    padding-right: 1.95rem;
+                    text-align: justify;
+                    margin-bottom: 0.975rem;
+                    max-height: 4rem;
+                    overflow-y: hidden;
+                    p {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        padding-left: 1.95rem;
+                        padding-right: 1.95rem;
+                    }
+                }
+                .actividades__articulo__boton{
+                    margin-left: auto;
+                    background-color: $color-btn-carousel;
+                    border-color: $color-btn-carousel;
+                    border-style: solid;
+                    font-size: 1.2rem;
+                    font-family: $font-main;
+                    font-weight: 300;
+                    padding: 0.20rem 0.6rem;
+                    margin-bottom: 1.95rem;
+                    -webkit-transition-duration: 0.5s;
+                    transition-duration: 0.5s;
+                    &:hover{
+                        background-color: $color-btn-carousel-hover;
+                        border-color: $color-btn-carousel-hover;
+                        cursor: pointer;
+                    }
+                    a{
+                        color: $color-texto;
+                    }
+                }
+            }
+        }     
+    }
+}
+
+
+

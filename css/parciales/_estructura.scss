@@ -1,4 +1,8 @@
 @import "variables";
+@import "mapas";
+@import "mixins";
+@import "responsive-mixins";
+
 body{ 
     /*fondo con gradiente*/
     background: rgb(10,107,126);
@@ -10,13 +14,15 @@ body{
 }
 
 nav{
-    font-size: 1.7rem;
+    @include fuente-sw(1.7rem, 300);
     font-family: $font-main;
-    font-weight: 300;
+    @include max-sm{
+        @include fuente-sw(1rem,500);
+    }
 }
 
 a{ 
-    color: $color-main;
+    color: map-get($colores, colorPrincipal);
     text-decoration: none;
 }
 

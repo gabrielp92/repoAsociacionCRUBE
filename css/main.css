@@ -6,6 +6,8 @@
           box-sizing: border-box;
 }
 
+/* declaración del mapa colores */
+/* declaración del mapa propiedades-flex */
 body {
   /*fondo con gradiente*/
   background: #0a6b7e;
@@ -17,8 +19,15 @@ body {
 
 nav {
   font-size: 1.7rem;
-  font-family: "Roboto", sans-serif;
   font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 575.98px) {
+  nav {
+    font-size: 1rem;
+    font-weight: 500;
+  }
 }
 
 a {
@@ -34,20 +43,22 @@ a {
       grid-template-rows: auto auto 1fr auto;
 }
 
+/* declaración del mapa colores */
+/* declaración del mapa propiedades-flex */
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 15px 25px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: white;
+  padding: 15px 25px;
   position: fixed;
   width: 100%;
   top: 0px;
@@ -71,24 +82,46 @@ a {
   color: #0cb7f2 !important;
 }
 
-.header__nav .header__logo {
+@media (max-width: 575.98px) {
+  .header__nav .container-fluid {
+    width: 100vw;
+  }
+}
+
+.header__nav .container-fluid .header__logo {
   max-width: 100%;
   margin-left: 2rem;
 }
 
-.header__nav .header__item {
-  margin: 0px .975rem;
+@media (max-width: 575.98px) {
+  .header__nav .container-fluid .header__logo {
+    max-width: 50%;
+    margin: 0px;
+  }
 }
 
-.header__nav .header__item .header__link {
+.header__nav .container-fluid .header__item {
+  margin: 0px 0.975rem;
+}
+
+.header__nav .container-fluid .header__item .header__link {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-.header__nav .header__item .header__link:hover {
+.header__nav .container-fluid .header__item .header__link:hover {
   cursor: pointer;
   font-weight: 500;
   color: #0cb7f2;
+}
+
+@media (max-width: 575.98px) {
+  .header__nav .container-fluid .header__item {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 0px 0.6rem;
+  }
 }
 
 .header__nav .header__listRedes {
@@ -110,6 +143,14 @@ a {
   margin: 0px 0.25rem;
 }
 
+@media (max-width: 575.98px) {
+  .header__nav .header__listRedes .header__itemRedes {
+    display: none;
+  }
+}
+
+/* declaración del mapa colores */
+/* declaración del mapa propiedades-flex */
 .hero {
   background-image: url("../assets/img/imgPrincipal.jpg");
   height: 90vh;
@@ -129,12 +170,11 @@ a {
   margin-top: 4.9rem;
   background-color: rgba(22, 43, 78, 0.7);
   color: inherit;
-  font-size: 2rem;
-  font-weight: inherit;
   padding-top: 15px;
-  /*aplicando padding-top*/
   padding-bottom: 15px;
   margin-bottom: 65.5vh;
+  font-size: 2rem;
+  font-weight: inherit;
 }
 
 .hero__boton {
@@ -160,11 +200,19 @@ a {
   color: white;
 }
 
+/* declaración del mapa colores */
+/* declaración del mapa propiedades-flex */
+.carousel .actividades .carousel-item .carousel-caption .actividades__articulo__fecha, .carousel .actividades .carousel-item .carousel-caption .actividades__articulo__titulo, .carousel .actividades .carousel-item .carousel-caption .actividades__articulo__parrafo, .carousel .actividades .carousel-item .carousel-caption .actividades__articulo__parrafo p {
+  font-weight: 700;
+  padding-left: 1.95rem;
+  padding-right: 1.95rem;
+}
+
 .subtitulo__actividades {
-  color: white;
   font-size: 2rem;
-  font-family: "Roboto", sans-serif;
   font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  color: white;
   padding-left: 35px;
   margin-bottom: 3rem;
 }
@@ -175,8 +223,8 @@ a {
 
 .carousel .actividades {
   font-size: 1.25rem;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
+  font-family: "Roboto", sans-serif;
 }
 
 .carousel .actividades .carousel-item {
@@ -206,24 +254,14 @@ a {
 }
 
 .carousel .actividades .carousel-item .carousel-caption .actividades__articulo__fecha {
-  font-weight: 700;
-  padding-left: 1.95rem;
-  padding-right: 1.95rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: .5rem;
 }
 
 .carousel .actividades .carousel-item .carousel-caption .actividades__articulo__titulo {
-  font-weight: 700;
-  padding-left: 1.95rem;
-  padding-right: 1.95rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: .5rem;
 }
 
 .carousel .actividades .carousel-item .carousel-caption .actividades__articulo__parrafo {
-  font-weight: 700;
-  padding-left: 1.95rem;
-  padding-bottom: 0.975rem;
-  padding-right: 1.95rem;
   text-align: justify;
   margin-bottom: 0.975rem;
   max-height: 4rem;
@@ -234,19 +272,17 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-left: 1.95rem;
-  padding-right: 1.95rem;
 }
 
 .carousel .actividades .carousel-item .carousel-caption .actividades__articulo__boton {
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 0.2rem 0.6rem;
+  font-family: "Roboto", sans-serif;
   margin-left: auto;
   background-color: #a810a1;
   border-color: #a810a1;
   border-style: solid;
-  font-size: 1.2rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  padding: 0.20rem 0.6rem;
   margin-bottom: 1.95rem;
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
@@ -262,6 +298,8 @@ a {
   color: white;
 }
 
+/* declaración del mapa colores */
+/* declaración del mapa propiedades-flex */
 .video {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,28 +332,30 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: justify;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   font-family: "Roboto", sans-serif;
+  text-align: justify;
 }
 
 .video__descripcion__titulo {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #0cb7f2;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.25rem;
-  color: #0cb7f2;
-  font-size: 1.8rem;
-  font-weight: 300;
-  text-align: center;
 }
 
 .video__descripcion__parrafo {
-  color: white;
   font-size: 1.25rem;
   font-weight: 300;
+  color: white;
 }
 
+/* declaración del mapa colores */
+/* declaración del mapa propiedades-flex */
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -335,10 +375,10 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: cmap-get((centro: center, dFlex: flex, dNone: none, fColumna: column, fFila: row, fEnd: flex-end, fWrap: wrap, sBetween: space-between, sEvenly: space-evenly), fColumna);
+          flex-direction: cmap-get((centro: center, dFlex: flex, dNone: none, fColumna: column, fFila: row, fEnd: flex-end, fWrap: wrap, sBetween: space-between, sEvenly: space-evenly), fColumna);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -692,26 +732,28 @@ a {
     }
 }*/
 @media (max-width: 575.98px) {
-  nav {
-    font-size: 1rem;
-    font-weight: 500;
-  }
-  .container-fluid {
-    width: 100vw;
-  }
-  .container-fluid .header__logo {
-    max-width: 50%;
-    margin: 0px;
-  }
-  .container-fluid .header__item {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    margin: 0px 0.6rem;
-  }
-  .header__itemRedes {
-    display: none;
-  }
+  /* lo quito para luego poder aplicarlo con mixin */
+  /*
+    nav{
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+     .container-fluid{
+        width: 100vw;
+        .header__logo{  
+            max-width: 50%;
+            margin: 0px;
+        }
+        .header__item{
+            align-self: center;
+            margin: 0px 0.6rem;
+        }
+    }
+
+    .header__itemRedes{
+        display: none;
+    }*/
   .grid-contenedor-main {
     display: -ms-grid;
     display: grid;
@@ -885,4 +927,7 @@ a {
     max-width: 100%;
   }
 }
+
+/* declaración del mapa colores */
+/* declaración del mapa propiedades-flex */
 /*# sourceMappingURL=main.css.map */

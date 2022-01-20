@@ -29,12 +29,14 @@
 
 @media (max-width: 575.98px){
 
+     /* lo quito para luego poder aplicarlo con mixin */ 
+    /*
     nav{
         font-size: 1rem;
         font-weight: 500;
     }
-  
-    .container-fluid{
+
+     .container-fluid{
         width: 100vw;
         .header__logo{  
             max-width: 50%;
@@ -48,7 +50,7 @@
 
     .header__itemRedes{
         display: none;
-    }
+    }*/
     
     .grid-contenedor-main{
         display: grid;        

@@ -1,8 +1,11 @@
 @import "variables";
+@import "mapas";
+@import "mixins";
+
 .video{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: map-get($propiedades-flex, dFlex);
+    flex-direction: map-get($propiedades-flex, fFila);
+    justify-content: map-get($propiedades-flex, sBetween);
     margin-left: 2rem;
     margin-right: 2rem;
     margin-bottom: 4rem;
@@ -11,25 +14,23 @@
         min-width: 60%;
     }
     &__descripcion{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: justify;
-        flex-wrap: wrap;
+        display: map-get($propiedades-flex, dFlex);
+        flex-direction: map-get($propiedades-flex, fColumna);
+        justify-content: map-get($propiedades-flex, centro);
+        flex-wrap: map-get($propiedades-flex, fWrap);
         font-family: $font-main;
+        text-align: justify;
         &__titulo{
+            @include fuente-sw(1.8rem,300);
+            color: map-get($colores, colorSecundario);
+            text-align: map-get($propiedades-flex, centro);
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 1.25rem;
-            color: $color-secondary;
-            font-size: 1.8rem;
-            font-weight: 300;
-            text-align: center;
         }
         &__parrafo{
-            color: $color-texto;
-            font-size: 1.25rem;
-            font-weight: 300;
+            @include fuente-sw(1.25rem,300);
+            color: map-get($colores , colorTexto);
         }
     }
 }

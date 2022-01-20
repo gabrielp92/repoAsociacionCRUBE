@@ -1,0 +1,28 @@
+@import "variables";
+
+/* declaración del mapa colores */
+$colores:(
+    colorFondoH: $color-fondo-header,
+    colorPrincipal: $color-main,
+    colorPrincipalTransp: $color-main-transparente,
+    colorSecundario: $color-secondary,
+    colorTexto: $color-texto,
+    colorBtnHeroBorde: $color-btn-hero-borde,
+    colorBtnHeroHover: $color-btn-hero-hover,
+    colorBtnCarousel: $color-btn-carousel,
+    colorBtnCarouselHover: $color-btn-carousel-hover,
+    colorTextoCarousel: $color-texto-carousel
+);
+
+/* declaración del mapa propiedades-flex */
+$propiedades-flex:(
+    centro: center,
+    dFlex: flex,
+    dNone: none,
+    fColumna: column,
+    fFila: row,
+    fEnd: flex-end,
+    fWrap: wrap,
+    sBetween: space-between,
+    sEvenly: space-evenly
+);

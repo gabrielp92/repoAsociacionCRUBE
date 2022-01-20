@@ -1,44 +1,43 @@
 @import "variables";
+@import "mapas";
+@import "mixins";
+
 .footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 4rem 8rem;
+    display: map-get($propiedades-flex, dFlex);
+    flex-direction: map-get($propiedades-flex, fFila);
+    justify-content: map-get($propiedades-flex, sBetween);
+    @include padding(4rem,8rem);
     gap: 1.25rem;
     &__contenedor{
-        display: flex;
-        flex-direction: column;
-        align-items:center;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
+        display: map-get($propiedades-flex, dFlex);
+        flex-direction: cmap-get($propiedades-flex, fColumna);
+        align-items: map-get($propiedades-flex, centro);
+        justify-content: map-get($propiedades-flex, sEvenly);
+        flex-wrap: map-get($propiedades-flex, fWrap);
         .footer__logo{
             max-width: 100%;
         }
         .footer__direccion{
-            color: $color-texto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            flex-wrap: wrap;
+            color: map-get($colores, colorTexto);
+            display: map-get($propiedades-flex, dFlex);
+            flex-direction: map-get($propiedades-flex, fColumna);
+            justify-content: map-get($propiedades-flex, centro);
+            flex-wrap: map-get($propiedades-flex, fWrap);
             font-family: $font-main;
-            font-size: 1.25rem;
-            font-weight: 300;
+            @include fuente-sw(1.25rem,300);
             gap: 0.5rem;
-            text-align: center;
+            text-align: map-get($propiedades-flex, centro);
             .footer__subtitulo{
-                color: $color-secondary;
-                font-size: 1.6rem;
-                font-weight: inherit;
+                color: map-get($colores, colorSecundario);
+                @include fuente-sw(1.6rem, inherit);
             }
             .footer__ubicacion{
                 color: inherit;
-                font-size: inherit;
-                font-weight: inherit;
+                @include fuente-sw(inherit, inherit);
             }
             .footer__email{
-                color: $color-secondary;
-                font-size: inherit;
-                font-weight: inherit;
+                color: map-get($colores, colorSecundario);
+                @include fuente-sw(inherit, inherit);
             }
         }
     }

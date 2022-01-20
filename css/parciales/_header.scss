@@ -1,48 +1,68 @@
 @import "variables";
+@import "mapas";
+@import "mixins";
+@import "responsive-mixins";
+
 .header{
-    display: flex;
-    align-items: center;
-    padding:15px 25px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: $color-fondo-header;
+    display: map-get($propiedades-flex, dFlex);
+    justify-content: map-get($propiedades-flex, sBetween);
+    align-items: map-get($propiedades-flex, centro);
+    flex-wrap: map-get($propiedades-flex, fWrap);
+    background-color: map-get($colores, colorFondoH);
+    @include padding(15px,25px);
     position: fixed;
     width: 100%;
     top: 0px;
     z-index: 4;
     &__nav{
-        display:flex;
-        justify-content: center;
+        display: map-get($propiedades-flex, dFlex);
+        justify-content: map-get($propiedades-flex, centro);
         .navbar-light .navbar-nav .nav-link {
-            color: $color-main !important;
+            color: map-get($colores, colorPrincipal) !important;
             &:hover {
-                color: $color-secondary !important;
+                color: map-get($colores, colorSecundario) !important;
             }
         }
-        .header__logo{
-            max-width: 100%;
-            margin-left: 2rem;
-        }
-        .header__item{
-            margin: 0px .975rem;
-            .header__link{
-                transition: all 0.5s;
-                &:hover {
-                    cursor:pointer;
-                    font-weight: 500; 
-                    color: $color-secondary;       
+        .container-fluid{
+            @include max-sm{
+                width: 100vw;
+            }
+            .header__logo{
+                max-width: 100%;
+                margin-left: 2rem;
+                @include max-sm{
+                    max-width: 50%;
+                    margin: 0px;
+                }
+            }
+            .header__item{
+                @include margenes(0px, .975rem);
+                .header__link{
+                    transition: all 0.5s;
+                    &:hover {
+                        cursor:pointer;
+                        font-weight: 500; 
+                        color: map-get($colores, colorSecundario);      
+                    }
+                }
+                @include max-sm{
+                    align-self: center;
+                    margin: 0px 0.6rem;
                 }
             }
         }
         .header__listRedes{
             list-style: none; /*quita los bullets*/
-            display: flex;
-            justify-content: flex-end;
-            align-content: center;
+            display: map-get($propiedades-flex, dFlex);
+            justify-content: map-get($propiedades-flex, fEnd);
+            align-content: map-get($propiedades-flex, centro);
             margin-right: 2rem;
             margin-bottom: 0px;
             .header__itemRedes{
-                margin: 0px 0.25rem;
+                @include margenes(0px,.25rem);
+                @include max-sm{
+                    display: map-get($propiedades-flex, dNone);
+                }
             }
         }
     }

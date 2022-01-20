@@ -1,0 +1,15 @@
+@mixin fuente-sw($size, $weight)
+{
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin padding($valor1, $valor2)
+{
+    padding: $valor1 $valor2;
+}
+
+@mixin margenes($valor1, $valor2){
+    margin: $valor1 $valor2;
+}
+

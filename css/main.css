@@ -202,7 +202,7 @@ a {
 
 /* declaración del mapa colores */
 /* declaración del mapa propiedades-flex */
-.carousel .actividades .carousel-item .carousel-caption .actividades__articulo__fecha, .carousel .actividades .carousel-item .carousel-caption .actividades__articulo__titulo, .carousel .actividades .carousel-item .carousel-caption .actividades__articulo__parrafo, .carousel .actividades .carousel-item .carousel-caption .actividades__articulo__parrafo p {
+.carousel .actividades .carousel-item .carousel-caption .actividades__articulo__fecha, .carousel .actividades .carousel-item .carousel-caption .actividades__articulo__titulo, .carousel .actividades .carousel-item .carousel-caption .actividades__articulo__parrafo {
   font-weight: 700;
   padding-left: 1.95rem;
   padding-right: 1.95rem;
@@ -254,7 +254,7 @@ a {
 }
 
 .carousel .actividades .carousel-item .carousel-caption .actividades__articulo__fecha {
-  padding-bottom: .5rem;
+  padding-bottom: 0px;
 }
 
 .carousel .actividades .carousel-item .carousel-caption .actividades__articulo__titulo {
@@ -264,14 +264,12 @@ a {
 .carousel .actividades .carousel-item .carousel-caption .actividades__articulo__parrafo {
   text-align: justify;
   margin-bottom: 0.975rem;
-  max-height: 4rem;
-  overflow-y: hidden;
-}
-
-.carousel .actividades .carousel-item .carousel-caption .actividades__articulo__parrafo p {
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /*número de lineas que quiero mostrar*/
+  -webkit-box-orient: vertical;
 }
 
 .carousel .actividades .carousel-item .carousel-caption .actividades__articulo__boton {
@@ -732,28 +730,6 @@ a {
     }
 }*/
 @media (max-width: 575.98px) {
-  /* lo quito para luego poder aplicarlo con mixin */
-  /*
-    nav{
-        font-size: 1rem;
-        font-weight: 500;
-    }
-
-     .container-fluid{
-        width: 100vw;
-        .header__logo{  
-            max-width: 50%;
-            margin: 0px;
-        }
-        .header__item{
-            align-self: center;
-            margin: 0px 0.6rem;
-        }
-    }
-
-    .header__itemRedes{
-        display: none;
-    }*/
   .grid-contenedor-main {
     display: -ms-grid;
     display: grid;
@@ -807,16 +783,19 @@ a {
   .grid-contenedor-main .grid-item-actividades .actividades .carousel-item img {
     height: 20rem;
   }
-  .grid-contenedor-main .grid-item-actividades .actividades .carousel-item .actividades__articulo__fecha .actividades__articulo__titulo {
+  .grid-contenedor-main .grid-item-actividades .actividades .carousel-item .carousel-caption {
+    padding-bottom: 0px;
+  }
+  .grid-contenedor-main .grid-item-actividades .actividades .carousel-item .carousel-caption .actividades__articulo__fecha .actividades__articulo__titulo {
     color: black;
   }
-  .grid-contenedor-main .grid-item-actividades .actividades .carousel-item .actividades__articulo__parrafo {
+  .grid-contenedor-main .grid-item-actividades .actividades .carousel-item .carousel-caption .actividades__articulo__parrafo {
     color: black;
     font-family: "Roboto", sans-serif;
     font-size: 0.9rem;
     font-weight: 700;
   }
-  .grid-contenedor-main .grid-item-actividades .actividades .carousel-item .actividades__articulo__boton {
+  .grid-contenedor-main .grid-item-actividades .actividades .carousel-item .carousel-caption .actividades__articulo__boton {
     margin-bottom: 0px;
   }
   .grid-contenedor-main .video {

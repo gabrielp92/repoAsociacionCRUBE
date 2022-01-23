@@ -28,29 +28,6 @@
 }*/
 
 @media (max-width: 575.98px){
-
-     /* lo quito para luego poder aplicarlo con mixin */ 
-    /*
-    nav{
-        font-size: 1rem;
-        font-weight: 500;
-    }
-
-     .container-fluid{
-        width: 100vw;
-        .header__logo{  
-            max-width: 50%;
-            margin: 0px;
-        }
-        .header__item{
-            align-self: center;
-            margin: 0px 0.6rem;
-        }
-    }
-
-    .header__itemRedes{
-        display: none;
-    }*/
     
     .grid-contenedor-main{
         display: grid;        
@@ -99,19 +76,22 @@
                     img {
                         height: 20rem;
                     } 
-                    .actividades__articulo__fecha .actividades__articulo__titulo{
-                        color: $color-texto-carousel;
-                    }
-                    
-                    .actividades__articulo__parrafo{
-                        color:$color-texto-carousel;
-                        font-family: $font-main;
-                        font-size: 0.9rem;
-                        font-weight: 700;
-                    }
-                    
-                    .actividades__articulo__boton{
-                        margin-bottom: 0px;
+                    .carousel-caption{
+                        padding-bottom: 0px;
+                        .actividades__articulo__fecha .actividades__articulo__titulo{
+                            color: $color-texto-carousel;
+                        }
+                        
+                        .actividades__articulo__parrafo{
+                            color:$color-texto-carousel;
+                            font-family: $font-main;
+                            font-size: 0.9rem;
+                            font-weight: 700;
+                        }
+                        
+                        .actividades__articulo__boton{
+                            margin-bottom: 0px;
+                        }
                     }
                 }
             }    

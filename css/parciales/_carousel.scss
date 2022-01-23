@@ -41,7 +41,7 @@
                 color: map-get($colores, colorTextoCarousel);
                 .actividades__articulo__fecha{
                     @extend %articulo;
-                    padding-bottom: .5rem;
+                    padding-bottom: 0px;
                 }
                 .actividades__articulo__titulo{
                     @extend %articulo;
@@ -51,14 +51,11 @@
                     @extend %articulo;
                     text-align: justify;
                     margin-bottom: 0.975rem;
-                    max-height: 4rem;
-                    overflow-y: hidden;
-                    p {
-                        @extend %articulo;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                    }
+                    overflow: hidden; 
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2; /*número de lineas que quiero mostrar*/
+                    -webkit-box-orient: vertical;
                 }
                 .actividades__articulo__boton{
                     @include fuente-sw(1.2rem,300);

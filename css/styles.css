@@ -93,141 +93,6 @@ a{
 }
 
 /*FIN HEADER*/
-/* HERO SECTION */
-.hero{
-    background-image: url("../assets/img/imgPrincipal.jpg");
-    height: 90vh;
-    /* efecto */
-    background-attachment:fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    text-align: center;
-    margin-bottom: 50px;
-    background-position-y: 4.9rem;
-}
-
-.hero__titulo{
-    margin-top: 4.9rem;
-    background-color:rgba(22,43,78, 0.7);
-    color: inherit;
-    font-size: 2rem; 
-    font-weight:inherit;
-    padding-top: 15px; /*aplicando padding-top*/
-    padding-bottom: 15px;
-    margin-bottom: 65.5vh;
-}
-
-.hero__boton{
-    border-style:solid;
-    border-color: rgba(255, 255, 255, 0.7);
-    border-width: 2px;
-	background-color: rgba(22,43,78, 0.7);
-    color: inherit;
-    font-family: inherit;
-	font-size: 1.7rem;
-    font-weight: inherit;
-    padding: 10px;
-    transition: all 0.5s;
-}  
-
-.hero__boton:hover{
-    background-color: rgba(156, 47, 47, 0.836);
-    cursor: pointer;
-}
-
-.hero__boton a{
-    color: white;
-}
-/*FIN HERO SECTION*/
-
-
-.subtitulo__actividades{
-    color:white;
-    font-size: 2rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    padding-left: 35px;
-    margin-bottom: 3rem;
-}
-
-/*ACTIVIDADES*/
-
-.actividades{
-    color: white;
-    font-size: 1.25rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-}
-
- .actividades__articulo__img{
-    align-self: center;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
- }
-
- .actividades__articulo__fecha{
-    font-weight: 700;
-    color: black;
-    padding-left: 1.95rem;
-    padding-right: 1.95rem;
-    padding-bottom: 0.5rem;
- }
-
- .actividades__articulo__titulo{
-    font-weight: 700;
-    color: black;
-    padding-left: 1.95rem;
-    padding-right: 1.95rem;
-    padding-bottom: 0.5rem;
- }
-
- .actividades__articulo__parrafo{
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: black;
-    padding-left: 1.95rem;
-    padding-bottom: 0.975rem;
-    padding-right: 1.95rem;
-    text-align: justify;
-    margin-bottom: 0.975rem;
-    max-height: 4rem;
-    overflow-y: hidden;
- }
-
-.actividades__articulo__parrafo p{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-left: 1.95rem;
-    padding-right: 1.95rem;
-}
-
-.actividades__articulo__boton{
-    margin-left: auto;
-    background-color: rgb(168,16,161);
-    border-style: solid;
-    border-color: rgb(168, 16, 161);
-    font-size: 1.2rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    padding: 0.20rem 0.6rem;
-    margin-bottom: 1.95rem;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
- }
-
- .actividades__articulo__boton:hover{
-    background-color: rgb(233, 14, 222);
-    border-color: rgb(233, 14, 222);
-    cursor: pointer;
-}
-
-.actividades__articulo__boton a{
-    color: white;
-}
 
 /******************************************************************/
 .carousel {
@@ -251,54 +116,8 @@ a{
     height: 50rem;
   }
 
-
-/*******************************************************************/
-/*FIN ACTIVIDADES*/
-
-/*VIDEO*/
-.video{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 4rem;
-    gap: 1.25rem;
-}
-
-.video__youtube{
-    min-width: 60%;
-}
-
-.video__descripcion{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: justify;
-    flex-wrap: wrap;
-}
-
-.video__descripcion__titulo{
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1.25rem;
-    color: rgb(12,183,242);
-    font-size: 1.8rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    text-align: center;
-}
-
-.video__descripcion__parrafo{
-    color:white;
-    font-size: 1.25rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-}
-
-/*FIN VIDEO*/
-
 /*FOOTER*/
+
 .footer{
     display: flex;
     flex-direction: row;
@@ -357,6 +176,12 @@ a{
 
 .actividades__card{
     color: rgb(22,43,78);
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /*número de lineas que quiero mostrar*/
+    -webkit-box-orient: vertical;
+    height: 7.5rem;
 }
 
 .actividades__paginacion{
@@ -657,9 +482,41 @@ a{
     margin-bottom: 1rem;
 }
 
+.institucional__titulo--chico{
+    color: rgb(12,183,242);
+    font-size: 1.65rem;
+    font-weight: inherit;
+    text-align: left;
+    margin-bottom: .5rem;
+}
+
 .institucional__texto{ 
     text-align: justify;
+    margin-bottom: 1.5rem;
 }
+
+.table{  
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px; 
+    margin-top: 2rem;
+    text-align: center;
+    width: 50%;
+}
+
+.institucional__tabla__head{
+    background-color: rgb(22,43,78);
+    color: white;  
+
+}
+
+
+.institucional__tabla__body{
+    background-color: white; 
+    font-weight: 700;
+}
+
+
 /*FIN MAIN INSTITUCIONAL*/
 
 /*---------------------------------------*/
@@ -770,6 +627,15 @@ a{
     margin-top: 6.9rem;
 }
 
+.museo__main__video{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
 .grid-museo-main{
     display: grid;
 	grid-gap: 10px;
@@ -803,13 +669,18 @@ a{
 
 .museo__figure__descripcion{
     position: absolute;
-    left: 1rem;
+    left: .5rem;
+    right: .5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
     bottom: 0.5rem;
-    width: 100%;
-    height: 100%;
+    width: fit-content;
+    max-width: 85vw;
+    height:fit-content;
     display: flex;
     align-items: flex-end;
     color: white;
+    background-color:rgba(22,43,78, 0.7);
     font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -849,7 +720,7 @@ a{
         .carousel-caption p {
           margin-bottom: 1.25rem;
           font-size: 1.25rem;
-          line-height: 1.4;
+          line-height: 1.4rem;
         }
     }
 
@@ -983,15 +854,30 @@ a{
             display: none;
         }
 
+        .museo__main{
+            margin-top: 5rem;
+            margin-bottom: 1rem;
+        }
+
         .grid-museo-main{
             display: grid;
             grid-gap: 10px;
             grid-template-columns: 1fr;
             margin-left: 1rem;
             margin-right: 1rem;
-            margin-bottom: 1rem;
         }
 
+        .museo__main__video{
+            width: 90vw;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 8.5rem;
+        }
+
+        .museo__main__video__iframe{
+            max-width: 100%;      
+        } 
+        
         .grid-museo-main .ancho{
             grid-column:unset;
         }

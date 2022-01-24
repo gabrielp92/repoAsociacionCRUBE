@@ -1,0 +1,39 @@
+@import "variables";
+@import "mapas";
+@import "mixins";
+
+.institucional__titulo{
+    @include fuente-sw(2rem,inherit);
+    color: map-get($colores, colorSecundario);
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.institucional__titulo--chico{
+    @extend .institucional__titulo;
+    @include fuente-sw(1.65rem,inherit);
+    margin-bottom: .5rem;
+}
+
+.institucional__texto{ 
+    text-align: justify;
+    margin-bottom: 1.5rem;
+}
+
+.table{  
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px; 
+    margin-top: 2rem;
+    text-align: center;
+    width: 50%;
+    .institucional__tabla__head{
+        background-color: map-get($colores, colorPrincipal);
+        color: map-get($colores, colorTexto);  
+    
+    }
+    .institucional__tabla__body{
+        background-color: map-get($colores, colorFondoTabla);
+        font-weight: 700;
+    }
+}

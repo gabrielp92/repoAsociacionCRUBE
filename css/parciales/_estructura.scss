@@ -31,3 +31,13 @@ a{
     /*pancake stack*/
     grid-template-rows: auto auto 1fr auto;
 }
+
+.mainPages{
+    @include fuente-sw(1.25rem,300);
+    color: map-get($colores , colorTexto);
+    font-family: $font-main;
+    margin-top: 6.9rem;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;   
+}

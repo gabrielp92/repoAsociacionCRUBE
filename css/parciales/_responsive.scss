@@ -1,7 +1,5 @@
 @import "variables";
 
-/********************************* MEDIA QUERIES **********************************/
-
 @media (max-width: 400px){
 
     .footer__contenedor{
@@ -67,7 +65,6 @@
         .grid-item-actividades{
             width: 100vw;
             .actividades{
-                /* color: black;*/
                 font-size: 0.9rem;
                 font-family: $font-main;
                 text-align: center;
@@ -78,12 +75,9 @@
                     } 
                     .carousel-caption{
                         padding-bottom: 0px;
-                        .actividades__articulo__fecha .actividades__articulo__titulo{
-                            color: $color-texto-carousel;
-                        }
-                        
+                        background-color: transparent;
+                        color: black;   
                         .actividades__articulo__parrafo{
-                            color:$color-texto-carousel;
                             font-family: $font-main;
                             font-size: 0.9rem;
                             font-weight: 700;
@@ -138,30 +132,73 @@
         }
     }
     
-    .museo__fondo{
-        display: none;
+    .mainPages{
+        margin-top: 5rem;
+        margin-bottom: .75rem;
+        margin-left: .25rem;
+        margin-right: .25rem;
     }
 
-    .grid-museo-main{
-        display: grid;
-        grid-gap: 10px;
-        grid-template-columns: 1fr;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-bottom: 1rem;
+    .pb-3{
+        padding-bottom: 0px;
     }
 
-    .grid-museo-main .ancho{
-        grid-column:unset;
+    .mb-4{
+        margin-bottom: 0px !important;
     }
-    .grid-museo-main .alto{
-        grid-row:unset;
+
+    .institucional__titulo{
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
-    .grid-museo-main .grande{
-        grid-column: unset;
-        grid-row:unset;
+
+    .institucional__texto{
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
-    
+
+    .museo__main{
+        margin-top: 5rem;
+        margin-bottom: 0px;
+        .grid-museo-main{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 1fr;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            margin-bottom: 0px;
+            .ancho{
+                grid-column:unset;
+            }
+            .alto{
+                grid-row:unset;
+            }
+            .grande{
+                grid-column: unset;
+                grid-row:unset;
+            }
+            .museo__main__video{
+                width: 90vw;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 8.5rem;
+                .museo__main__video__iframe{
+                    max-width: 100%;      
+                }         
+            }
+        }
+        .museo__fondo{
+            display: none;
+        }
+    }
+
+
+    /*
+    .contacto__form__textarea{
+        width: 60%;
+    }*/
+
+   
 }    
 
 @media (min-width: 768px) and (max-width: 991.98px){ 

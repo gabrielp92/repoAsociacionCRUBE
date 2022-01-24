@@ -1,0 +1,20 @@
+@import "variables";
+@import "mapas";
+@import "mixins";
+
+.py-5{
+    padding-top: 1rem !important;
+    .actividades__card{
+        color: map-get($colores , colorPrincipal);
+        overflow: hidden; 
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4; /*número de lineas que quiero mostrar*/
+        -webkit-box-orient: vertical;
+        height: 7.5rem;
+    }
+
+    .actividades__paginacion{
+        background-color: transparent;
+    }
+}

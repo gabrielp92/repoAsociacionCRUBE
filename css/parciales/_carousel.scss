@@ -17,7 +17,7 @@
 }
 
 .carousel {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     .actividades{
         @include fuente-sw(1.25rem,500);
         font-family: $font-main;
@@ -39,6 +39,7 @@
                 bottom: 3rem;
                 z-index: 3;
                 color: map-get($colores, colorTextoCarousel);
+                background-color: map-get($colores, colorPrincipalTransp);
                 .actividades__articulo__fecha{
                     @extend %articulo;
                     padding-bottom: 0px;
@@ -48,6 +49,7 @@
                     padding-bottom: .5rem;
                 }
                 .actividades__articulo__parrafo{
+
                     @extend %articulo;
                     text-align: justify;
                     margin-bottom: 0.975rem;

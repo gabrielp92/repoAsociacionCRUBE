@@ -910,10 +910,12 @@ a {
   .museo__main .museo__fondo {
     display: none;
   }
-  /*
-    .contacto__form__textarea{
-        width: 60%;
-    }*/
+  .contacto__form__fieldset .contacto__form__input {
+    width: 100%;
+  }
+  .contacto__form__fieldset .contacto__form__textarea {
+    min-width: 100%;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -1132,5 +1134,109 @@ a {
 
 .museo__main .border-bottom {
   border-bottom: none !important;
+}
+
+/* declaración del mapa colores */
+/* declaración del mapa propiedades-flex */
+.contacto__form__enviar:hover, .contacto__form__reset:hover {
+  background-color: #e90ede;
+  border-color: #e90ede;
+  cursor: pointer;
+}
+
+.contacto__form__enviar, .contacto__form__reset {
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 0.2rem 0.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.contacto__form {
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  margin-top: 6.9rem;
+  color: #0cb7f2;
+  text-align: center;
+}
+
+.contacto__form__fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #0cb7f2;
+  margin-bottom: 0.5rem;
+  padding-top: 0px;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.contacto__form__fieldset .contacto__form__legend {
+  font-weight: 500;
+}
+
+.contacto__form__fieldset .contacto__form__input {
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-bottom: 2px solid #0cb7f2;
+  font-size: 1.1rem;
+  color: #162b4e;
+  height: 1.5rem;
+  min-width: 40%;
+  text-align: center;
+}
+
+.contacto__form__fieldset .contacto__form__input:focus {
+  background-color: lightblue;
+  border: 4px solid #0cb7f2;
+}
+
+.contacto__form__fieldset .contacto__form__textarea {
+  padding: 0.75rem 1rem;
+  border: 2px solid #0cb7f2;
+  border-radius: 4px;
+  color: #162b4e;
+  font-size: inherit;
+  margin-bottom: 0.75rem;
+  resize: none;
+  text-align: center;
+  width: 40%;
+}
+
+.contacto__form__fieldset .contacto__form__textarea:focus {
+  background-color: lightblue;
+  border: 4px solid #0cb7f2;
+}
+
+.contacto__form__enviar {
+  background-color: #a810a1;
+  border-style: solid;
+  border-color: #a810a1;
+  color: white;
+  margin-bottom: 1.95rem;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.contacto__form__reset {
+  background-color: #a810a1;
+  border-style: solid;
+  border-color: #a810a1;
+  color: white;
+  margin-bottom: 1.95rem;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 /*# sourceMappingURL=main.css.map */

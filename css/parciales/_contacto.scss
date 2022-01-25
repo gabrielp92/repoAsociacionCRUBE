@@ -2,4 +2,94 @@
 @import "mapas";
 @import "mixins";
 
+%contacto-hover{
+    background-color: rgb(233, 14, 222);
+    border-color: rgb(233, 14, 222);
+    cursor: pointer;
+}
 
+%contacto-btn{
+    @include fuente-sw(1.2rem,300);
+    @include padding(.2rem, .6rem);
+    font-family: $font-main;
+}
+
+.contacto__form{
+    @include fuente-sw(1.25rem,300);
+    font-family: $font-main;
+    margin-top: 6.9rem;
+    color: map-get($colores, colorSecundario);
+    text-align: center;
+    &__fieldset{
+        display: map-get($propiedades-flex, dFlex);
+        flex-direction: map-get($propiedades-flex, fColumna);
+        flex-wrap: map-get($propiedades-flex, fWrap);
+        align-items: map-get($propiedades-flex, centro);
+        text-align: map-get($propiedades-flex, centro);
+        color: map-get($colores, colorSecundario);
+        margin-bottom: 0.5rem;
+        padding-top: 0px;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        .contacto__form__legend{
+            font-weight: 500;
+        }
+        .contacto__form__input{
+            @include padding(.75rem, 1rem);
+            margin-bottom: 1rem;
+            border: none;
+            border-bottom: 2px solid map-get($colores, colorSecundario);
+            font-size: 1.1rem;
+            color: map-get($colores, colorPrincipal);
+            height: 1.5rem;
+            min-width: 40%;
+            text-align: center;
+            &:focus{
+                background-color: lightblue;
+                border: 4px solid #0cb7f2;
+            }
+        }
+        .contacto__form__textarea{
+            @include padding(.75rem, 1rem);
+            border: 2px solid map-get($colores, colorSecundario);
+            border-radius: 4px;
+            color: map-get($colores, colorPrincipal);
+            font-size: inherit;
+            margin-bottom: 0.75rem;
+            resize: none;
+            text-align: center;
+            width: 40%;
+            &:focus{
+                background-color: lightblue;
+                border: 4px solid rgb(12,183,242);  
+            }
+        }
+    }
+    &__enviar{
+        @extend %contacto-btn;
+        background-color: rgb(168,16,161);
+        border-style: solid;
+        border-color: rgb(168, 16, 161);
+        color: map-get($colores, colorTexto);
+        margin-bottom: 1.95rem;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        &:hover{
+            @extend %contacto-hover;
+        }
+    }
+    &__reset{
+        @extend %contacto-btn;
+        background-color: rgb(168,16,161);
+        border-style: solid;
+        border-color: rgb(168, 16, 161);
+        color: map-get($colores, colorTexto);
+        margin-bottom: 1.95rem;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        &:hover{
+            @extend %contacto-hover;
+        }
+    }
+}

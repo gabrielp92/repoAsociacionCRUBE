@@ -22,7 +22,7 @@ a{
 .grid-body{
     display: grid;
     /*pancake stack*/
-    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
 }
 
 .mainPages{

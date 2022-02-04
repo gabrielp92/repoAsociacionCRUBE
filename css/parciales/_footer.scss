@@ -10,7 +10,7 @@
     gap: 1.25rem;
     &__contenedor{
         display: map-get($propiedades-flex, dFlex);
-        flex-direction: cmap-get($propiedades-flex, fColumna);
+        flex-direction: map-get($propiedades-flex, fColumna);
         align-items: map-get($propiedades-flex, centro);
         justify-content: map-get($propiedades-flex, sEvenly);
         flex-wrap: map-get($propiedades-flex, fWrap);

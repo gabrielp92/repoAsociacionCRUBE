@@ -31,7 +31,6 @@ nav {
 }
 
 a {
-  color: #162b4e;
   text-decoration: none;
 }
 
@@ -39,8 +38,8 @@ a {
   display: -ms-grid;
   display: grid;
   /*pancake stack*/
-  -ms-grid-rows: auto auto 1fr auto;
-      grid-template-rows: auto auto 1fr auto;
+  -ms-grid-rows: auto auto auto 1fr auto;
+      grid-template-rows: auto auto auto 1fr auto;
 }
 
 .mainPages {
@@ -85,11 +84,11 @@ a {
           justify-content: center;
 }
 
-.header__nav .navbar-light .navbar-nav .nav-link {
+.header__nav .nav-link.active {
   color: #162b4e !important;
 }
 
-.header__nav .navbar-light .navbar-nav .nav-link:hover {
+.header__nav .nav-link.active:hover {
   color: #0cb7f2 !important;
 }
 
@@ -154,6 +153,14 @@ a {
   margin: 0px 0.25rem;
 }
 
+.header__nav .header__listRedes .header__itemRedes a {
+  color: #162b4e;
+}
+
+.header__nav .header__listRedes .header__itemRedes a:hover {
+  color: #0cb7f2;
+}
+
 @media (max-width: 575.98px) {
   .header__nav .header__listRedes .header__itemRedes {
     display: none;
@@ -184,6 +191,8 @@ a {
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 65.5vh;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 2rem;
   font-weight: inherit;
 }
@@ -240,13 +249,14 @@ a {
 
 .carousel .actividades .carousel-item {
   height: 50rem;
+  max-width: 100vw;
 }
 
 .carousel .actividades .carousel-item img {
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 100%;
+  width: 100%;
   height: 50rem;
 }
 
@@ -274,7 +284,7 @@ a {
 }
 
 .carousel .actividades .carousel-item .carousel-caption .actividades__articulo__parrafo {
-  text-align: justify;
+  text-align: center;
   margin-bottom: 0.975rem;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1000,6 +1010,7 @@ a {
 /* declaración del mapa propiedades-flex */
 .py-5 {
   padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 
 .py-5 .actividades__card {
@@ -1013,8 +1024,54 @@ a {
   height: 7.5rem;
 }
 
-.py-5 .actividades__paginacion {
-  background-color: transparent;
+.py-5 .modal-dialog {
+  height: 80vh;
+  width: 95vw;
+}
+
+.py-5 .modal-dialog .modal-content {
+  color: #162b4e;
+  font-weight: 500;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.py-5 .modal-dialog .modal-content .modal-body {
+  /*fondo con gradiente*/
+  background: #0a6b7e;
+  background: -webkit-gradient(linear, left top, right top, from(#0a6b7e), color-stop(38%, #203c71), color-stop(67%, #142647), to(#0b1528));
+  background: linear-gradient(90deg, #0a6b7e 0%, #203c71 38%, #142647 67%, #0b1528 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a6b7e",endColorstr="#0b1528",GradientType=1);
+  overflow-x: hidden;
+  text-align: left;
+}
+
+.py-5 .modal-dialog .modal-content .modal-body img {
+  /*height: auto;*/
+  height: 70vh;
+}
+
+@media (max-width: 575.98px) {
+  .py-5 .modal-dialog .modal-content .modal-body img {
+    display: none;
+  }
+}
+
+.py-5 .modal-dialog .modal-content .modal-body p {
+  color: white;
+}
+
+@media (max-width: 575.98px) {
+  .py-5 .modal-dialog .modal-content .modal-body p {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .py-5 .modal-dialog .modal-content {
+    max-height: 80vh;
+    max-width: 90vw;
+  }
 }
 
 /* declaración del mapa colores */

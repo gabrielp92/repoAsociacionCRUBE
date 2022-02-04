@@ -1,9 +1,11 @@
 @import "variables";
 @import "mapas";
 @import "mixins";
+@import "responsive-mixins";
 
 .py-5{
     padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
     .actividades__card{
         color: map-get($colores , colorPrincipal);
         overflow: hidden; 
@@ -13,8 +15,36 @@
         -webkit-box-orient: vertical;
         height: 7.5rem;
     }
-
-    .actividades__paginacion{
-        background-color: transparent;
+    .modal-dialog
+    {
+        height: 80vh;
+        width: 95vw;
+        .modal-content{
+            color: map-get($colores , colorPrincipal);
+            font-weight: 500;
+            margin-left: auto;
+            margin-right: auto;
+            .modal-body{
+                @include fondo-degradado;
+                text-align: left;
+                img{
+                    /*height: auto;*/
+                    height: 70vh;
+                    @include max-sm{
+                        display: none;
+                    }
+                }
+                p{
+                    color: white;
+                    @include max-sm{
+                        width: 90vw;
+                    }
+                }       
+            }
+            @include max-sm{ 
+                max-height: 80vh;
+                max-width: 90vw;
+            }
+        }
     }
 }

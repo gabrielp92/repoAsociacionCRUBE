@@ -17,7 +17,7 @@
     &__nav{
         display: map-get($propiedades-flex, dFlex);
         justify-content: map-get($propiedades-flex, centro);
-        .navbar-light .navbar-nav .nav-link {
+        .nav-link.active{
             color: map-get($colores, colorPrincipal) !important;
             &:hover {
                 color: map-get($colores, colorSecundario) !important;
@@ -60,6 +60,12 @@
             margin-bottom: 0px;
             .header__itemRedes{
                 @include margenes(0px,.25rem);
+                a{
+                    color: map-get($colores, colorPrincipal);
+                    &:hover { 
+                        color: map-get($colores, colorSecundario);      
+                    }
+                }
                 @include max-sm{
                     display: map-get($propiedades-flex, dNone);
                 }

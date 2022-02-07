@@ -23,7 +23,9 @@ a{
     display: grid;
     /*pancake stack*/
     grid-template-rows: auto 1fr auto;
+    overflow-x: hidden;
 }
+    
 
 .mainPages{
     @include fuente-sw(1.25rem,300);

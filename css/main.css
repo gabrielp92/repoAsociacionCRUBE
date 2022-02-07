@@ -35,6 +35,7 @@ a {
   display: grid;
   /*pancake stack*/
   grid-template-rows: auto 1fr auto;
+  overflow-x: hidden;
 }
 
 .mainPages {
@@ -593,6 +594,7 @@ a {
   .grid-contenedor-main {
     display: grid;
     grid-template-columns: 1fr;
+    overflow-x: hidden;
   }
   .grid-contenedor-main .grid-item-hero {
     width: 100vw;

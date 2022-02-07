@@ -26,10 +26,10 @@
 }*/
 
 @media (max-width: 575.98px){
-    
     .grid-contenedor-main{
-        display: grid;        
+        display: grid;       
         grid-template-columns: 1fr;
+        overflow-x: hidden;
         .grid-item-hero{
             width: 100vw;
             text-align: center;

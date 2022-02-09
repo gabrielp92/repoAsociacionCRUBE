@@ -669,12 +669,33 @@ a {
   .grid-contenedor-main .grid-item-actividades .actividades .carousel-item .carousel-caption {
     padding-bottom: 0px;
     background-color: transparent;
-    color: black;
+    color: white;
+    text-transform: uppercase;
+  }
+  .grid-contenedor-main .grid-item-actividades .actividades .carousel-item .carousel-caption .actividades__articulo__fecha {
+    background-color: rgba(168, 16, 161, 0.7);
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .grid-contenedor-main .grid-item-actividades .actividades .carousel-item .carousel-caption .actividades__articulo__titulo {
+    background-color: rgba(22, 43, 78, 0.7);
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding-bottom: 0px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .grid-contenedor-main .grid-item-actividades .actividades .carousel-item .carousel-caption .actividades__articulo__parrafo {
-    font-family: "Roboto", sans-serif;
+    background-color: rgba(22, 43, 78, 0.7);
+    color: white;
     font-size: 0.9rem;
-    font-weight: 700;
+    font-weight: 500;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .grid-contenedor-main .grid-item-actividades .actividades .carousel-item .carousel-caption .actividades__articulo__boton {
     margin-bottom: 0px;
@@ -842,12 +863,32 @@ a {
   .grid-contenedor-main .grid-item-actividades .actividades .carousel-item .carousel-caption {
     padding-bottom: 0px;
     background-color: transparent;
-    color: black;
+    color: white;
+    text-transform: uppercase;
+  }
+  .grid-contenedor-main .grid-item-actividades .actividades .carousel-item .carousel-caption .actividades__articulo__fecha {
+    background-color: rgba(168, 16, 161, 0.7);
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .grid-contenedor-main .grid-item-actividades .actividades .carousel-item .carousel-caption .actividades__articulo__titulo {
+    background-color: rgba(22, 43, 78, 0.7);
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding-bottom: 0px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .grid-contenedor-main .grid-item-actividades .actividades .carousel-item .carousel-caption .actividades__articulo__parrafo {
-    font-family: "Roboto", sans-serif;
+    background-color: rgba(22, 43, 78, 0.7);
+    color: white;
     font-size: 0.9rem;
-    font-weight: 700;
+    font-weight: 500;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .grid-contenedor-main .grid-item-actividades .actividades .carousel-item .carousel-caption .actividades__articulo__boton {
     margin-bottom: 0px;

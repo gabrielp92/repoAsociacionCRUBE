@@ -71,11 +71,32 @@
                     .carousel-caption{
                         padding-bottom: 0px;
                         background-color: transparent;
-                        color: black;   
-                        .actividades__articulo__parrafo{
-                            font-family: $font-main;
-                            font-size: 0.9rem;
+                        color: white;
+                        text-transform: uppercase;
+                        .actividades__articulo__fecha{
+                            background-color: $color-fondo-fecha;
+                            display: inline-block;
+                            font-size: 1rem;
                             font-weight: 700;
+                            padding-left: .5rem;
+                            padding-right: .5rem;
+                        }
+                        .actividades__articulo__titulo{
+                            background-color: $color-main-transparente;
+                            display: inline-block;
+                            font-size: 1.25rem;
+                            font-weight: 500;
+                            padding-bottom: 0px;
+                            padding-left: 1rem;
+                            padding-right: 1rem;
+                        } 
+                        .actividades__articulo__parrafo{
+                            background-color: $color-main-transparente;
+                            color: white;
+                            font-size: .9rem;
+                            font-weight: 500;
+                            padding-left: 1rem;
+                            padding-right: 1rem;
                         }
                         
                         .actividades__articulo__boton{
@@ -251,13 +272,32 @@
                     .carousel-caption{
                         padding-bottom: 0px;
                         background-color: transparent;
-                        color: black;   
-                        .actividades__articulo__parrafo{
-                            font-family: $font-main;
-                            font-size: 0.9rem;
+                        color: white;
+                        text-transform: uppercase;
+                        .actividades__articulo__fecha{
+                            background-color: $color-fondo-fecha;
+                            display: inline-block;
+                            font-size: 1rem;
                             font-weight: 700;
+                            padding-left: .5rem;
+                            padding-right: .5rem;
                         }
-                        
+                        .actividades__articulo__titulo{
+                            background-color: $color-main-transparente;
+                            font-size: 1.25rem;
+                            font-weight: 500;
+                            padding-bottom: 0px;
+                            padding-left: 1rem;
+                            padding-right: 1rem;
+                        }
+                        .actividades__articulo__parrafo{
+                            background-color: $color-main-transparente;
+                            color: white;
+                            font-size: .9rem;
+                            font-weight: 500;
+                            padding-left: 1rem;
+                            padding-right: 1rem;
+                        }     
                         .actividades__articulo__boton{
                             margin-bottom: 0px;
                         }

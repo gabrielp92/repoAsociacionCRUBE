@@ -1013,6 +1013,12 @@ a {
 .contenedor__table {
   margin-bottom: 2rem;
 }
+@media (max-width: 575.98px) {
+  .contenedor__table {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
 .contenedor__table .table {
   margin-left: auto;
   margin-right: auto;
@@ -1020,13 +1026,34 @@ a {
   text-align: center;
   width: 50%;
 }
+@media (max-width: 575.98px) {
+  .contenedor__table .table {
+    width: 100%;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .contenedor__table .table {
+    width: 65%;
+  }
+}
+.contenedor__table .table td {
+  vertical-align: middle;
+  color: #162b4e;
+}
 .contenedor__table .table .institucional__tabla__head {
   background-color: #162b4e;
+}
+.contenedor__table .table .institucional__tabla__head th {
+  vertical-align: middle;
   color: white;
 }
 .contenedor__table .table .institucional__tabla__body {
   background-color: white;
   font-weight: 700;
+}
+.contenedor__table .table .institucional__tabla__body th {
+  vertical-align: middle;
+  color: #162b4e;
 }
 
 /* declaración del mapa colores */
@@ -1034,6 +1061,16 @@ a {
 .py-5 {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important;
+}
+@media (max-width: 575.98px) {
+  .py-5 {
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .py-5 {
+    margin-bottom: 1rem;
+  }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   .py-5 .container {

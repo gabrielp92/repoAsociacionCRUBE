@@ -13,7 +13,7 @@
     font-family: $font-main;
     font-weight: 100;
     text-align: map-get($propiedades-flex, centro);
-    margin-bottom: 50px;
+    margin-bottom: 3rem;
     background-position-y: 4.9rem;
     &__titulo{
         margin-top: 4.9rem;
@@ -26,7 +26,7 @@
         margin-right: auto;
         @include fuente-sw(2rem,inherit);
     }
-    &__boton{
+    &__boton{ 
         border-style:solid;
         border-color: map-get($colores, colorBtnHeroBorde);
         border-width: 2px;
@@ -42,6 +42,6 @@
         }
         a{
             color: map-get($colores, colorTexto);
-        }
-    }  
+        }  
+    }
 }

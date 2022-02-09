@@ -20,6 +20,7 @@
         flex-wrap: map-get($propiedades-flex, fWrap);
         font-family: $font-main;
         text-align: justify;
+        text-justify: auto;
         &__titulo{
             @include fuente-sw(1.8rem,300);
             color: map-get($colores, colorSecundario);

@@ -4,45 +4,59 @@
 @import "responsive-mixins";
 
 .header{
-    display: map-get($propiedades-flex, dFlex);
-    justify-content: map-get($propiedades-flex, sBetween);
-    align-items: map-get($propiedades-flex, centro);
-    flex-wrap: map-get($propiedades-flex, fWrap);
-    background-color: map-get($colores, colorFondoH);
     @include padding(15px,25px);
     position: fixed;
     top: 0px;
     z-index: 4;
-    .navbar-light{
-        max-width: 100vw;
-    }
-    &__nav{
-        display: map-get($propiedades-flex, dFlex);
-        justify-content: map-get($propiedades-flex, centro);
-        .nav-link.active{
-            color: map-get($colores, colorPrincipal) !important;
-            &:hover {
-                color: map-get($colores, colorSecundario) !important;
-            }
+    
+    .nav-link.active{
+        color: map-get($colores, colorPrincipal) !important;
+        &:hover {
+            color: map-get($colores, colorSecundario) !important;
         }
-        .container-fluid{
+    }
+    .container-fluid{
+        @include max-sm{
+            width: 100%;
+        }
+        .header__logo{
+            max-width: 100%;
+            margin-left: 2rem;
             @include max-sm{
-                width: 100%;
+                max-width: 50%;
+                margin: 0px;
             }
-            .header__logo{
-                max-width: 100%;
-                margin-left: 2rem;
-                @include max-sm{
-                    max-width: 50%;
-                    margin: 0px;
-                }
-                @include min-sm-max-md{
-                    max-width: 30%;
-                    margin: 0px;
+            @include min-sm-max-md{
+                max-width: 30%;
+                margin: 0px;
+            }
+            @include min-md-max-lg{
+                max-width: 20%;
+                margin: 0px;
+                margin-left: .5rem;
+                margin-right: 1.45rem;
+            }
+        }   
+        .navbar-nav{
+            margin-left: auto;
+            margin-right: auto;
+            .nav-item{
+                @include min-md-max-lg{
+                    padding-left: .5rem;
+                    padding-right: .5rem;
+                    margin-right: 0px;
                 }
             }
             .header__item{
                 @include margenes(0px, .975rem);
+
+                .nav-link{
+                    @include min-md-max-lg{
+                        padding-left: 0px;
+                        padding-right: 0px;
+                    }
+                }
+
                 .header__link{
                     transition: all 0.5s;
                     &:hover {
@@ -52,34 +66,39 @@
                     }
                 }
                 @include max-sm{
-                    align-self: center;
                     margin: 0px 0.6rem;
+                    text-align: center;
                 }
                 @include min-sm-max-md{
                     @include fuente-sw(1.25rem,500);
-                    align-self: center;
                     margin: 0px 0.3rem;
+                    text-align: center;
+                }
+                @include min-md-max-lg{
+                    @include fuente-sw(1.15rem,500);
+                    margin: 0px 0.25rem;
+                    text-align: center;
                 }
             }
         }
-        .header__listRedes{
-            list-style: none; /*quita los bullets*/
-            display: map-get($propiedades-flex, dFlex);
-            justify-content: map-get($propiedades-flex, fEnd);
-            align-content: map-get($propiedades-flex, centro);
-            margin-right: 2rem;
-            margin-bottom: 0px;
-            .header__itemRedes{
-                @include margenes(0px,.25rem);
-                a{
-                    color: map-get($colores, colorPrincipal);
-                    &:hover { 
-                        color: map-get($colores, colorSecundario);      
-                    }
+    }
+    .header__listRedes{
+        list-style: none; /*quita los bullets*/
+        display: map-get($propiedades-flex, dFlex);
+        justify-content: map-get($propiedades-flex, fEnd);
+        align-content: map-get($propiedades-flex, centro);
+        margin-right: 2rem;
+        margin-bottom: 0px;
+        .header__itemRedes{
+            @include margenes(0px,.25rem);
+            a{
+                color: map-get($colores, colorPrincipal);
+                &:hover { 
+                    color: map-get($colores, colorSecundario);      
                 }
-                @include max-sm{
-                    display: map-get($propiedades-flex, dNone);
-                }
+            }
+            @include max-sm{
+                display: map-get($propiedades-flex, dNone);
             }
         }
     }

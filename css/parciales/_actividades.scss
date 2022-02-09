@@ -12,10 +12,17 @@
     @include min-sm-max-md{
         margin-bottom: 1rem;
     }
+    @include min-md-max-lg{
+        margin-bottom: 1rem;
+    }
     .container{
         @include min-sm-max-md{    
             max-width: 100vw;
         }
+        @include min-md-max-lg{
+            max-width: 100vw;
+        }
+
         .actividades__card{
             color: map-get($colores , colorPrincipal);
             overflow: hidden; 
@@ -43,6 +50,10 @@
                     max-height: 90vh;
                     max-width: 90vw;
                 }
+                @include min-md-max-lg{
+                    max-height: 90vh;
+                    max-width: 90vw;
+                }
                 .modal-body{
                     @include fondo-degradado;
                     text-align: left;
@@ -52,6 +63,10 @@
                             display: none;
                         }
                         @include min-sm-max-md{ 
+                            width: 100%;
+                            margin-bottom: 1rem;
+                        }
+                        @include min-md-max-lg{
                             width: 100%;
                             margin-bottom: 1rem;
                         }
@@ -66,8 +81,13 @@
                             line-height: 1.4;
                             width: 100%;
                             text-align: center;
-                         
                         }
+                        @include min-md-max-lg{
+                            @include fuente-sw(1.1rem,500);
+                            line-height: 1.4;
+                            width: 100%;
+                            text-align: center;
+                        } 
                     }       
                 }
             }

@@ -2,85 +2,78 @@
 @import "mapas";
 @import "mixins";
 
-.grid-museo-main{
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 200px;
-    grid-auto-flow: dense;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-    .alto{
-        grid-row: span 2;
-    }
-    .ancho{
-        grid-column: span 2;
-    }
-    .grande{
-        grid-column: span 2;
-        grid-row: span 2;
-    }
-}
-
 .museo__main{  
     margin-top: 6.9rem;
-    margin-bottom: 3rem;
-    .grid-item-figure{
-        display: map-get($propiedades-flex, dFlex);
-        justify-content: map-get($propiedades-flex, centro);
-        align-items: map-get($propiedades-flex, centro);
-        position: relative;
-        img {
-            max-width: 100%;
-            height: auto;
-            vertical-align: middle;
-            display: inline-block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 5px;
-            position: relative;
-            z-index: 1;
+    margin-bottom: 0px;
+    .grid-museo-main{
+        display: grid;
+        grid-gap: .625rem;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-auto-rows: 200px;
+        grid-auto-flow: dense;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        .alto{
+            grid-row: span 2;
         }
-        .museo__figure__descripcion{
-            @include fuente-sw(1.2rem,700);
-            font-family: $font-main;
-            position: absolute;
-            left: .5rem;
-            right: .5rem;
-            padding-left: .5rem;
-            padding-right: .5rem;
-            bottom: 0.5rem;
-            width: fit-content;
-            max-width: 90%;
-            height:fit-content;
+        .ancho{
+            grid-column: span 2;
+        }
+        .grande{
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .grande--video{
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .grid-item-figure{
             display: map-get($propiedades-flex, dFlex);
-            align-items: map-get($propiedades-flex, fEnd);
-            color: map-get($colores, colorTexto);
-            background-color: map-get($colores, colorPrincipalTransp);
-            overflow: hidden;
-            z-index: 2;
-        } 
-        .museo__main__video{
-            display: map-get($propiedades-flex, dFlex);
-            flex-direction: map-get($propiedades-flex, fFila);
             justify-content: map-get($propiedades-flex, centro);
-            margin-left: 2rem;
-            margin-right: 2rem;
-            margin-bottom: 2rem;
+            align-items: map-get($propiedades-flex, centro);
+            position: relative;
+            img {
+                max-width: 100%;
+                height: auto;
+                vertical-align: middle;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+                position: relative;
+                z-index: 1;
+            }
+            .museo__figure__descripcion{
+                @include fuente-sw(1.2rem,700);
+                font-family: $font-main;
+                position: absolute;
+                left: .5rem;
+                right: .5rem;
+                padding-left: .5rem;
+                padding-right: .5rem;
+                bottom: 0.5rem;
+                width: fit-content;
+                max-width: 90%;
+                height:fit-content;
+                display: map-get($propiedades-flex, dFlex);
+                align-items: map-get($propiedades-flex, fEnd);
+                color: map-get($colores, colorTexto);
+                background-color: map-get($colores, colorPrincipalTransp);
+                overflow: hidden;
+                z-index: 2;
+            } 
         }
     }
     .museo__fondo{
         background-image: url("../assets/img/img-museo/museoFondo.jpg");
-        height: 60vh; 
+        height: 60vh;
         /* efecto */
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: bottom;
-    }
-    .border-bottom{
-        border-bottom: none !important;
     }
 }

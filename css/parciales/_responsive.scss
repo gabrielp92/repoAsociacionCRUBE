@@ -1,4 +1,5 @@
 @import "variables";
+@import "mapas";
 
 @media (max-width: 400px){
 
@@ -17,14 +18,6 @@
     }
 }
 
-/*
-@media (min-width: 576px) and (max-width: 767.98px){ 
-
-    .header__listRedes{
-        display :none;
-    }
-}*/
-
 @media (max-width: 575.98px){
     .grid-contenedor-main{
         display: grid;       
@@ -37,16 +30,18 @@
                 background-image: url("../assets/img/imgMobile.jpg");
                 background-position-y: 3rem;
                 height: 95vh;
-                background-size:auto;
+                background-size:cover;
                 margin-bottom: 1rem;
                 &__titulo{
                     font-size: 1.1rem;
                     padding-bottom: 10px;
+                    padding-left: .5rem;
+                    padding-right: .5rem;
                     margin-top: 3.5rem;
                     margin-bottom: 65vh;
                 }
                 &__boton{
-                    font-size: 1.5rem;
+                    font-size: 1.4rem;
                     padding-top: 5px;
                     padding-bottom: 5px;
                 } 
@@ -94,22 +89,27 @@
             display: grid;
             grid-gap: 1rem;
             grid-template-columns: 1fr;
-            margin: 0.5rem;
+            margin: .5rem;
             .grid-item-video__youtube{
-                width: 95vw;
                 margin-left: auto;
                 margin-right: auto;
                 .video__youtube{
                     max-width: 100%;
+                    padding-left: .125rem;
+                    padding-right: .125rem;
                 }
+            }
+            &__descripcion{
+                margin-left: .5rem;
+                margin-right: .5rem;
             }
         }
     }
 
     .footer{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-between;
+        display: map-get($propiedades-flex, dFlex);
+        flex-direction: map-get($propiedades-flex, fColumaRev);
+        justify-content: map-get($propiedades-flex, sBetween);
         padding: 2rem .5rem;
         &__contenedor{
             width: 95vw;
@@ -140,7 +140,7 @@
     }
 
     .pb-3{
-        padding-bottom: 0px;
+        padding-bottom: 0px !important;
     }
 
     .mb-4{
@@ -159,32 +159,21 @@
 
     .museo__main{
         margin-top: 5rem;
-        margin-bottom: 0px;
+        margin-bottom: 0px !important;
         .grid-museo-main{
             display: grid;
-            grid-gap: 10px;
             grid-template-columns: 1fr;
             margin-left: 1rem;
             margin-right: 1rem;
-            margin-bottom: 0px;
             .ancho{
                 grid-column:unset;
             }
             .alto{
-                grid-row:unset;
+                grid-column: span 2;
             }
             .grande{
                 grid-column: unset;
                 grid-row:unset;
-            }
-            .museo__main__video{
-                width: 90vw;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 8.5rem;
-                .museo__main__video__iframe{
-                    max-width: 100%;      
-                }         
             }
         }
         .museo__fondo{
@@ -202,7 +191,197 @@
             }
         }   
     }       
-}    
+}  
+
+@media (min-width: 576px) and (max-width: 767.98px){ 
+
+    .header__itemRedes{
+        display: none;
+    }
+
+    .grid-contenedor-main{
+        display: grid;       
+        grid-template-columns: 1fr;
+        overflow-x: hidden;
+        .grid-item-hero{
+            width: 100vw;
+            text-align: center;
+            .hero{
+                background-image: url("../assets/img/imgMobile.jpg");
+                background-position-y: 3rem;
+                height: 95vh;
+                background-size:cover;
+                margin-bottom: 1rem;
+                &__titulo{
+                    font-size: 1.3rem;
+                    padding-left: .5rem;
+                    padding-right: .5rem;
+                    padding-bottom: 10px;
+                    margin-top: 3.5rem;
+                    margin-bottom: 65vh;
+                }
+                &__boton{
+                    font-size: 1.5rem;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                } 
+            }
+        }
+        .grid-item-subtitulo{
+            width: 100vw;
+            .subtitulo__actividades{
+                font-size: 1.7rem;
+                padding-left: 0px;
+                padding-right: 0px;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+        }
+        .grid-item-actividades{
+            width: 100vw;
+            .actividades{
+                font-size: 0.9rem;
+                font-family: $font-main;
+                text-align: center;
+                .carousel-item {
+                    height: 30rem;
+                    img {
+                        height: 30rem;
+                    } 
+                    .carousel-caption{
+                        padding-bottom: 0px;
+                        background-color: transparent;
+                        color: black;   
+                        .actividades__articulo__parrafo{
+                            font-family: $font-main;
+                            font-size: 0.9rem;
+                            font-weight: 700;
+                        }
+                        
+                        .actividades__articulo__boton{
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+            }    
+        }
+        .video{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: 1fr;
+            margin: .5rem;
+            .grid-item-video__youtube{
+                width: 100%;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                .video__youtube{
+                    width: 100%;
+                    padding-left: .125rem;
+                    padding-right: .125rem;
+                }
+            }
+            &__descripcion{
+                margin-left: .5rem;
+                margin-right: .5rem;
+            }
+        }
+    }
+
+    .footer{
+        display: map-get($propiedades-flex, dFlex);
+        flex-direction: map-get($propiedades-flex, fColumaRev);
+        justify-content: map-get($propiedades-flex, sBetween);
+        padding: 2rem .5rem;
+        &__contenedor{
+            width: 95vw;
+            margin-left: auto;
+            margin-right: auto;
+            .footer__logo{
+                display: none;
+            }
+            .footer__direccion{
+                max-width: 100%;
+            }
+        }
+        &__mapa{
+            text-align: center; /*para centrar el iframe*/
+            line-height: 0;     /*para eliminar padding debajo del mapa*/
+            .footer__iframe{
+                width: 100%;
+            }
+        }
+    }
+
+    .mainPages{
+        margin-top: 5rem;
+        margin-bottom: .75rem;
+        margin-left: .25rem;
+        margin-right: .25rem;
+    }
+
+    .pb-3{
+        padding-bottom: 0px !important;
+    }
+
+    .mb-4{
+        margin-bottom: 0px !important;
+    }
+
+    .institucional__titulo{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .institucional__texto{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .museo__main{
+        margin-top: 5rem;
+        .grid-museo-main{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 1fr;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            margin-bottom: 0px !important;
+            .ancho{
+                grid-column:unset;
+            }
+            .alto{
+                grid-row:unset;
+            }
+            .grande{
+                grid-column: unset;
+                grid-row:unset;
+            }
+        }
+        .museo__fondo{
+            display: none;
+        }
+    }
+
+    .contacto__form{
+        &__fieldset{
+            .contacto__form__input{
+                width: 100%;
+            }
+            .contacto__form__textarea{
+                min-width: 100%;
+            }
+        }   
+    }       
+}  
+
+/**********************************************************/
+
+
+
+
+
+
 
 @media (min-width: 768px) and (max-width: 991.98px){ 
     

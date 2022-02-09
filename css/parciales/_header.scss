@@ -36,6 +36,10 @@
                     max-width: 50%;
                     margin: 0px;
                 }
+                @include min-sm-max-md{
+                    max-width: 30%;
+                    margin: 0px;
+                }
             }
             .header__item{
                 @include margenes(0px, .975rem);
@@ -50,6 +54,11 @@
                 @include max-sm{
                     align-self: center;
                     margin: 0px 0.6rem;
+                }
+                @include min-sm-max-md{
+                    @include fuente-sw(1.25rem,500);
+                    align-self: center;
+                    margin: 0px 0.3rem;
                 }
             }
         }

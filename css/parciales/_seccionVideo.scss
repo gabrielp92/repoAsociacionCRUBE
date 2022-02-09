@@ -2,7 +2,6 @@
 @import "mapas";
 @import "mixins";
 
-
 .video{
     display: map-get($propiedades-flex, dFlex);
     flex-direction: map-get($propiedades-flex, fFila);

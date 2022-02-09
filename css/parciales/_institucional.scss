@@ -20,20 +20,23 @@
     margin-bottom: 1.5rem;
 }
 
-.table{  
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0px; 
-    margin-top: 2rem;
-    text-align: center;
-    width: 50%;
-    .institucional__tabla__head{
-        background-color: map-get($colores, colorPrincipal);
-        color: map-get($colores, colorTexto);  
-    
-    }
-    .institucional__tabla__body{
-        background-color: map-get($colores, colorFondoTabla);
-        font-weight: 700;
+.contenedor__table
+{
+    margin-bottom: 2rem;
+    .table{  
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+        text-align: center;
+        width: 50%;
+        .institucional__tabla__head{
+            background-color: map-get($colores, colorPrincipal);
+            color: map-get($colores, colorTexto);  
+        
+        }
+        .institucional__tabla__body{
+            background-color: map-get($colores, colorFondoTabla);
+            font-weight: 700;
+        }
     }
 }

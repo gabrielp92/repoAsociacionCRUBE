@@ -29,7 +29,7 @@
         color: map-get($colores, colorSecundario);
         margin-bottom: 0.5rem;
         padding-top: 0px;
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
         padding-left: 1rem;
         padding-right: 1rem;
         .contacto__form__legend{
@@ -56,7 +56,7 @@
             border-radius: 4px;
             color: map-get($colores, colorPrincipal);
             font-size: inherit;
-            margin-bottom: 0.75rem;
+            margin-bottom: .25rem;
             resize: none;
             text-align: center;
             width: 40%;
@@ -72,7 +72,7 @@
         border-style: solid;
         border-color: rgb(168, 16, 161);
         color: map-get($colores, colorTexto);
-        margin-bottom: 1.95rem;
+        margin-bottom: 1rem;
         -webkit-transition-duration: 0.5s;
         transition-duration: 0.5s;
         &:hover{
@@ -85,7 +85,7 @@
         border-style: solid;
         border-color: rgb(168, 16, 161);
         color: map-get($colores, colorTexto);
-        margin-bottom: 1.95rem;
+        margin-bottom: 1rem;
         -webkit-transition-duration: 0.5s;
         transition-duration: 0.5s;
         &:hover{

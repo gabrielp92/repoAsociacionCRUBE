@@ -1,13 +1,18 @@
 @import "variables";
 @import "mapas";
 @import "mixins";
+@import "responsive-mixins";
 
 .footer{
     display: map-get($propiedades-flex, dFlex);
     flex-direction: map-get($propiedades-flex, fFila);
     justify-content: map-get($propiedades-flex, sBetween);
-    @include padding(4rem,8rem);
+    max-width: 100vw;
     gap: 1.25rem;
+    padding-left: 9rem;
+    padding-right: 9rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     &__contenedor{
         display: map-get($propiedades-flex, dFlex);
         flex-direction: map-get($propiedades-flex, fColumna);
@@ -41,4 +46,12 @@
             }
         }
     }
+    .footer__mapa{
+        @include min-lg-max-xxl{
+            .footer__iframe{
+                width: 100%;   
+            }
+        }
+    }
 }
+

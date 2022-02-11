@@ -1,6 +1,7 @@
 @import "variables";
 @import "mapas";
 @import "mixins";
+@import "responsive-mixins";
 
 .hero{
     background-image: url("../assets/img/imgPrincipal.jpg");
@@ -15,33 +16,44 @@
     text-align: map-get($propiedades-flex, centro);
     margin-bottom: 3rem;
     background-position-y: 4.9rem;
+    @include min-lg-max-xxl{
+        background-position-y: 3.8rem;
+    }
     &__titulo{
         margin-top: 4.9rem;
         background-color: map-get($colores, colorPrincipalTransp);
         color: inherit;
         padding-top: 15px;
         padding-bottom: 15px;
-        margin-bottom: 65.5vh;
+        margin-bottom: 60vh;
         margin-left: auto;
         margin-right: auto;
         @include fuente-sw(2rem,inherit);
+        @include min-lg-max-xxl{
+            margin-bottom: 50vh;
+            margin-top: 3rem;
+            padding-top: 2rem;
+        }
     }
     &__boton{ 
+        @include fuente-sw(1.7rem,inherit);
         border-style:solid;
         border-color: map-get($colores, colorBtnHeroBorde);
         border-width: 2px;
         background-color: map-get($colores, colorPrincipalTransp);
         color: inherit;
         font-family: inherit;
-        @include fuente-sw(1.7rem,inherit);
         padding: 10px;
         transition: all 0.5s;
+        @include min-lg-max-xxl{
+            margin-top: 1rem;
+        }
         &:hover{
             background-color: map-get($colores , colorBtnHeroHover);
             cursor: pointer;
         }
         a{
             color: map-get($colores, colorTexto);
-        }  
+        } 
     }
 }

@@ -1,6 +1,7 @@
 @import "variables";
 @import "mapas";
 @import "mixins";
+@import "responsive-mixins";
 
 .video{
     display: map-get($propiedades-flex, dFlex);
@@ -8,10 +9,22 @@
     justify-content: map-get($propiedades-flex, sBetween);
     margin-left: 2rem;
     margin-right: 2rem;
+    margin-top: 5rem;
     margin-bottom: 4rem;
     gap: 1.25rem;
-    &__youtube{
-        min-width: 60%;
+    @include min-lg-max-xxl{
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    }
+    .grid-item-video__youtube{ 
+        line-height: 1; 
+        align-self: center;
+        .video__youtube{
+            min-width: 60%;
+            @include min-lg-max-xxl{
+                min-width: 50%;
+            } 
+        }
     }
     &__descripcion{
         display: map-get($propiedades-flex, dFlex);

@@ -1,6 +1,7 @@
 @import "variables";
 @import "mapas";
 @import "mixins";
+@import "responsive-mixins"; 
 
 .bd-placeholder-img {
     font-size: 1.125rem;
@@ -25,7 +26,8 @@
     @include fuente-sw(2rem,300);
     font-family: $font-main;
     color: map-get($colores , colorTexto);
-    padding-left: 35px;
+    padding-left: 0px;
+    text-align: center;
     margin-bottom: 3rem;
 }
 
@@ -37,12 +39,20 @@
         .carousel-item {
             height: 50rem;
             max-width: 100vw;
+            @include min-lg-max-xxl{
+                height: 45rem;
+                max-width: 100vw;
+            }
             img{
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100%;
                 height: 50rem;
+                width: 100%;
+                @include min-lg-max-xxl{
+                    height: 45rem;
+                    width: 100%;
+                }
             }
             .actividades__articulo__img{
                 align-self: map-get($propiedades-flex, centro);

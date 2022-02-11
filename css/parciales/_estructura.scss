@@ -34,3 +34,9 @@ a{
     margin-left: 2rem;
     margin-right: 2rem;   
 }
+
+.grid-item-main{
+    @include min-lg-max-xxl{
+        max-width: 100vw;
+    }
+}

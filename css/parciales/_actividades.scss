@@ -54,6 +54,10 @@
                     max-height: 90vh;
                     max-width: 90vw;
                 }
+                @include min-lg-max-xxl{
+                    max-height: 90vh;
+                    max-width: 90vw;
+                }
                 .modal-body{
                     @include fondo-degradado;
                     text-align: left;
@@ -67,6 +71,10 @@
                             margin-bottom: 1rem;
                         }
                         @include min-md-max-lg{
+                            width: 100%;
+                            margin-bottom: 1rem;
+                        }
+                        @include min-lg-max-xxl{
                             width: 100%;
                             margin-bottom: 1rem;
                         }
@@ -84,6 +92,12 @@
                         }
                         @include min-md-max-lg{
                             @include fuente-sw(1.1rem,500);
+                            line-height: 1.4;
+                            width: 100%;
+                            text-align: center;
+                        }
+                        @include min-lg-max-xxl{
+                            @include fuente-sw(1.5rem,500);
                             line-height: 1.4;
                             width: 100%;
                             text-align: center;

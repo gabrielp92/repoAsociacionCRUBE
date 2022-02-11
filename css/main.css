@@ -1492,6 +1492,12 @@ a {
     max-width: 90vw;
   }
 }
+@media (min-width: 992px) and (max-width: 1365.98px) {
+  .py-5 .container .modal-dialog .modal-content {
+    max-height: 90vh;
+    max-width: 90vw;
+  }
+}
 .py-5 .container .modal-dialog .modal-content .modal-body {
   /*fondo con gradiente*/
   background: #0a6b7e;
@@ -1520,6 +1526,12 @@ a {
     margin-bottom: 1rem;
   }
 }
+@media (min-width: 992px) and (max-width: 1365.98px) {
+  .py-5 .container .modal-dialog .modal-content .modal-body img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
 .py-5 .container .modal-dialog .modal-content .modal-body p {
   color: white;
 }
@@ -1540,6 +1552,15 @@ a {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .py-5 .container .modal-dialog .modal-content .modal-body p {
     font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (min-width: 992px) and (max-width: 1365.98px) {
+  .py-5 .container .modal-dialog .modal-content .modal-body p {
+    font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.4;
     width: 100%;

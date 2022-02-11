@@ -27,7 +27,9 @@
             width: 100vw;
             text-align: center;
             .hero{
+                background-repeat: no-repeat, repeat;
                 background-image: url("../assets/img/imgMobile.jpg");
+                background-blend-mode: luminosity;
                 background-position-y: 3rem;
                 height: 95vh;
                 background-size:cover;
@@ -228,7 +230,9 @@
             width: 100vw;
             text-align: center;
             .hero{
+                background-repeat: no-repeat, repeat;
                 background-image: url("../assets/img/imgMobile.jpg");
+                background-blend-mode: luminosity;
                 background-position-y: 3rem;
                 height: 95vh;
                 background-size:cover;
@@ -429,7 +433,9 @@
             width: 100vw;
             text-align: center;
             .hero{
+                background-repeat: no-repeat, repeat;
                 background-image: url("../assets/img/imgMobile.jpg");
+                background-blend-mode: luminosity;
                 background-position-y: 3rem;
                 height: 95vh;
                 background-size:cover;

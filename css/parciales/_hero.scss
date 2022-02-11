@@ -4,7 +4,9 @@
 @import "responsive-mixins";
 
 .hero{
+    background-repeat: no-repeat, repeat;
     background-image: url("../assets/img/imgPrincipal.jpg");
+    background-blend-mode: lighten;
     height: 90vh;
     /* efecto */
     background-attachment:fixed;
@@ -19,16 +21,32 @@
     @include min-lg-max-xxl{
         background-position-y: 3.8rem;
     }
+    .textoGradiente {
+        color: rgba(32,60,113,1);
+        background: linear-gradient(to right, rgb(10, 139, 172) 20%, rgba(32,60,113,1) 40%, $color-main 60%, rgb(10,139,172) 80%);
+        background-size: 200% auto;
+        text-decoration: bold;
+        color: #000;
+        background-clip: padding-box;
+        -webkit-background-clip: padding-box;
+        -webkit-text-fill-color: white;
+        animation: shine 5s linear infinite;
+    }
+    @keyframes shine {
+        to {
+          background-position: 200% center;
+        }
+    }
     &__titulo{
         margin-top: 4.9rem;
-        background-color: map-get($colores, colorPrincipalTransp);
         color: inherit;
         padding-top: 15px;
         padding-bottom: 15px;
         margin-bottom: 60vh;
         margin-left: auto;
         margin-right: auto;
-        @include fuente-sw(2rem,inherit);
+        @include fondo-degradado;
+        @include fuente-sw(2rem, inherit);
         @include min-lg-max-xxl{
             margin-bottom: 50vh;
             margin-top: 3rem;

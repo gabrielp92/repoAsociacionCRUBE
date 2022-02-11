@@ -42,61 +42,72 @@
                 margin-left: .5rem;
                 margin-right: 1.45rem;
             }
-        }   
-        .navbar-nav{
-            margin-left: auto;
-            margin-right: auto;
-            .nav-item{
-                @include min-md-max-lg{
-                    padding-left: .5rem;
-                    padding-right: .5rem;
-                    margin-right: 0px;
-                }
-                @include min-lg-max-xxl{
-                    padding-left: .5rem;
-                    padding-right: .5rem;
-                    margin-right: 0px;
-                }
+        }  
+        .navbar-toggler{
+            color: map-get($colores, colorPrincipal);
+            &:focus{
+                box-shadow: 0 0 0 .125rem;
             }
-            .header__item{
-                @include margenes(0px, .975rem);
-
-                .nav-link{
+        } 
+        .navbar-collapse{
+            @include max-sm{
+                padding-top: 1rem;
+            }
+            .navbar-nav{
+                margin-left: auto;
+                margin-right: auto;
+                .nav-item{
                     @include min-md-max-lg{
-                        padding-left: 0px;
-                        padding-right: 0px;
+                        padding-left: .5rem;
+                        padding-right: .5rem;
+                        margin-right: 0px;
                     }
                     @include min-lg-max-xxl{
-                        padding-left: 0px;
-                        padding-right: 0px;
+                        padding-left: .5rem;
+                        padding-right: .5rem;
+                        margin-right: 0px;
                     }
                 }
-                .header__link{
-                    transition: all 0.5s;
-                    &:hover {
-                        cursor:pointer;
-                        font-weight: 500; 
-                        color: map-get($colores, colorSecundario);      
+                .header__item{
+                    @include margenes(0px, .975rem);
+
+                    .nav-link{
+                        @include min-md-max-lg{
+                            padding-left: 0px;
+                            padding-right: 0px;
+                        }
+                        @include min-lg-max-xxl{
+                            padding-left: 0px;
+                            padding-right: 0px;
+                        }
                     }
-                }
-                @include max-sm{
-                    margin: 0px 0.6rem;
-                    text-align: center;
-                }
-                @include min-sm-max-md{
-                    @include fuente-sw(1.25rem,500);
-                    margin: 0px 0.3rem;
-                    text-align: center;
-                }
-                @include min-md-max-lg{
-                    @include fuente-sw(1.15rem,500);
-                    margin: 0px 0.25rem;
-                    text-align: center;
-                }
-                @include min-lg-max-xxl{
-                    @include fuente-sw(1.15rem,500);
-                    margin: 0px 0.25rem;
-                    text-align: center;
+                    .header__link{
+                        transition: all 0.5s;
+                        &:hover {
+                            cursor:pointer;
+                            font-weight: 500; 
+                            color: map-get($colores, colorSecundario);      
+                        }
+                    }
+                    @include max-sm{
+                        margin: 0px 0.6rem;
+                        text-align: center;
+                    }
+                    @include min-sm-max-md{
+                        @include fuente-sw(1.25rem,500);
+                        margin: 0px 0.3rem;
+                        text-align: center;
+                    }
+                    @include min-md-max-lg{
+                        @include fuente-sw(1.15rem,500);
+                        margin: 0px 0.25rem;
+                        text-align: center;
+                    }
+                    @include min-lg-max-xxl{
+                        @include fuente-sw(1.15rem,500);
+                        margin: 0px 0.25rem;
+                        text-align: center;
+                    }
                 }
             }
         }

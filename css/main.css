@@ -214,7 +214,6 @@ a {
 /* declaración del mapa colores */
 /* declaración del mapa propiedades-flex */
 .hero {
-  background-repeat: no-repeat, repeat;
   background-image: url("../assets/img/imgPrincipal.jpg");
   background-blend-mode: lighten;
   height: 90vh;
@@ -361,6 +360,7 @@ a {
   left: 0;
   height: 50rem;
   width: 100%;
+  margin: auto;
 }
 @media (min-width: 992px) and (max-width: 1365.98px) {
   .carousel .actividades .carousel-item img {
